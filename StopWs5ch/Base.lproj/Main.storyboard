@@ -43,13 +43,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="b0c-oB-m7C"/>
                                     <barButtonItem systemItem="pause" id="zzq-AM-V5G">
                                         <connections>
-                                            <action selector="pausebtnPressed:" destination="BYZ-38-t0r" id="Wed-SY-i3V"/>
+                                            <action selector="pausebtnPressed:" destination="BYZ-38-t0r" id="Xgi-as-tWl"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="W6J-jS-Z9d"/>
                                     <barButtonItem systemItem="stop" id="PE1-ee-0a4">
                                         <connections>
-                                            <action selector="stopbtnPressed:" destination="BYZ-38-t0r" id="S8B-eY-11G"/>
+                                            <action selector="stopbtnpressed:" destination="BYZ-38-t0r" id="gv7-wl-fjE"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

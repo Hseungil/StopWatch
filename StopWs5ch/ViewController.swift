@@ -23,27 +23,38 @@ class ViewController: UIViewController {
 
     @IBAction func playbtnPressed(_ sender: Any) {
         //scheduledTimer 호출
-        if !mytimer.isValid{
-        mytimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        }else{
-            timer_running = true
-        }
+        if !timer_running{
+            mytimer = Timer.init(timeInterval:1, repeats: true, block:{
+                (timer:Timer) -> Void in
+                    self.count += 1
+                    self.timeLable.text = String(self.count)
+            }
+        )
+       
+        timer_running = true
+            
+       //     Timer.init(TimeInterval:1, repeats:true, block:(timer:Timer-> void) in//
+        //        counter += 1
+       //     timeLabel.text = String(Counte))
+      //  }else{
+       //     timer_running = true
+        //}
         
-    }
+        }
     
+//    @objc func updateTime(){
+//        count += 1
+//        timeLable.text = String(count)
+//    }
+    
+    }
     @IBAction func pausebtnPressed(_ sender: Any) {
         mytimer.invalidate()
     }
     
-    @IBAction func stopbtnPressed(_ sender: Any) {
+    @IBAction func stopbtnpressed(_ sender: Any) {
         mytimer.invalidate()
         count = 0
         timeLable.text = String(count)
     }
-    @objc func updateTime(){
-        count += 1
-        timeLable.text = String(count)
-    }
-    
 }
-
